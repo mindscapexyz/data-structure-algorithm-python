@@ -13,9 +13,6 @@ def gcd(m, n):
     return n
 
 
-print(gcd(19, 10))
-
-
 class Fraction:
     """Class to represent fraction data structure"""
 
@@ -29,7 +26,8 @@ class Fraction:
     def __add__(self, other_fraction):
         new_num = self.num * other_fraction.den + self.den * other_fraction.num
         new_den = self.den * other_fraction.den
-        return Fraction(new_num, new_den)
+        common = gcd(new_num, new_den)
+        return Fraction(new_num // common, new_den // common)
 
 
 my_f = Fraction(3, 5)
