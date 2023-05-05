@@ -15,13 +15,10 @@ def anagram_solution1(s1, s2):
             if s1[pos1] == a_list[pos2]:
                 found = True
             else:
-                print("s1 is:", s1[pos1])
-                print("s2 is:", a_list[pos2])
                 pos2 = pos2 + 1
 
         if found:
             a_list[pos2] = None
-            print("List is: ", a_list)
         else:
             still_ok = False
 
@@ -29,4 +26,4 @@ def anagram_solution1(s1, s2):
     return still_ok
 
 
-print(anagram_solution1("abcd", "dcba"))
+print(anagram_solution1("abcd", "cdba"))
