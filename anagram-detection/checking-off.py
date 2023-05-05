@@ -3,6 +3,7 @@ def anagram_solution1(s1, s2):
     Check each character in the first string actually occur in the second
     If it is possible to 'checkoff' each character then two strings must be anagram
     If first string has more characters than second string, it is obviously not an anagram
+    This solution is O(n^2)
     """
     a_list = list(s2)
 
