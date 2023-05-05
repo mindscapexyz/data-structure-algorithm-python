@@ -29,6 +29,12 @@ class Fraction:
         common = gcd(new_num, new_den)
         return Fraction(new_num // common, new_den // common)
 
+    def __eq__(self, other):
+        first_num = self.num + other.den
+        second_num = other.num * self.den
+
+        return first_num == second_num
+
 
 my_f = Fraction(3, 5)
 print(my_f)
