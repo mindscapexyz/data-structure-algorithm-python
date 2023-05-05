@@ -3,8 +3,6 @@ def gcd(m, n):
     # Only works if denominator is positive
 
     while m % n != 0:
-        print("m is: ", m)
-        print("n is: ", n)
         old_m = m
         old_n = n
         m = old_n
@@ -31,14 +29,16 @@ class Fraction:
 
     def __eq__(self, other):
         first_num = self.num + other.den
-        second_num = other.num * self.den
+        second_num = other.num + self.den
 
         return first_num == second_num
 
 
-my_f = Fraction(3, 5)
+my_f = Fraction(1, 2)
 print(my_f)
-my_f_s = Fraction(1, 5)
+my_f_s = Fraction(1, 2)
 sum_f = my_f + my_f_s
 
 print(sum_f)
+
+print(my_f == my_f_s)
