@@ -1,3 +1,21 @@
+def gcd(m, n):
+    # Greatest common divisor: Euclid's Algorithm
+    # Only works if denominator is positive
+
+    while m % n != 0:
+        print("m is: ", m)
+        print("n is: ", n)
+        old_m = m
+        old_n = n
+        m = old_n
+        n = old_m % old_n
+
+    return n
+
+
+print(gcd(19, 10))
+
+
 class Fraction:
     """Class to represent fraction data structure"""
 
@@ -18,4 +36,5 @@ my_f = Fraction(3, 5)
 print(my_f)
 my_f_s = Fraction(1, 5)
 sum_f = my_f + my_f_s
+
 print(sum_f)
