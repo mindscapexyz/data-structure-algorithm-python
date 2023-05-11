@@ -25,4 +25,4 @@ def anagram_solution2(s1, s2):
     return matches
 
 
-print(anagram_solution2("abcde", "ecdbaa"))
+print(anagram_solution2("abcde", "ecdba"))
