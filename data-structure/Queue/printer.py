@@ -7,8 +7,10 @@ class Printer:
     def tick(self):
         if self.current_task != None:
             self.time_remaining = self.time_remaining - 1
+            print(self.time_remaining)
             if self.time_remaining <= 0:
                 self.current_task = None
+
 
     def busy(self):
         if self.current_task != None:

@@ -12,6 +12,7 @@ def simulation(num_seconds, pages_per_minute):
     for current_second in range(num_seconds):
         if new_print_task():
             task = tasks.Task(current_second)
+            print("New task with current sec:", current_second)
             print_queue.enqueue(task)
 
         if (not lab_printer.busy()) and (not print_queue.is_empty()):
