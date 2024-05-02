@@ -1,3 +1,5 @@
+# TODO: HS: 2.5.2024
+# Does not pass all cases yet
 def isValid(s: str) -> bool:
     index = 0
     buffer = []
@@ -14,14 +16,14 @@ def isValid(s: str) -> bool:
         elif current_char in [")", "}", "]"]:
             if index == 0:
                 return False
-            else:
-                print(s[index])
-                print(s[index - 1])
-                if s[index - 1] == complement_parantheses.get(current_char):
+            elif buffer:
+                if buffer[-1] == complement_parantheses.get(current_char):
                     buffer.pop()
                     index += 1
                 else:
                     return False
+            else:
+                return False
         else:
             return False
     if buffer == []:
@@ -31,5 +33,6 @@ def isValid(s: str) -> bool:
 
 
 arg = "()[]{}"
+arg = "(())"
 result = isValid(arg)
 print(result)
